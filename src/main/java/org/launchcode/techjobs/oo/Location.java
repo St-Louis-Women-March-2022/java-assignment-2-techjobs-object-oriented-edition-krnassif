@@ -8,9 +8,12 @@ public class Location {
     private static int nextId = 1;
     private String value;
 
-    public Location() {
-        id = nextId;
-        nextId++;
+    //public Location() {
+    //   id = nextId;
+    //   nextId++;
+
+    public Location(String value) {
+        super(value);
     }
 
     // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
