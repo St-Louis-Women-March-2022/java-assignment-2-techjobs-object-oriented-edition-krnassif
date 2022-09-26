@@ -13,7 +13,7 @@ public class Location {
     //   nextId++;
 
     public Location(String value) {
-        super(value);
+        super();
     }
 
     // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The

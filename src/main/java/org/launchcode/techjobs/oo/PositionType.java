@@ -35,22 +35,27 @@ public class PositionType {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(id, value);
     }
 
     public String toString() {
+
         return value;
     }
 
     public int getId() {
+
         return id;
     }
 
     public String getValue() {
+
         return value;
     }
 
     public void setValue(String value) {
+
         this.value = value;
     }
 
