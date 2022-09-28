@@ -42,4 +42,33 @@ public class JobTest {
         assertFalse(firstJob.equals(secondJob));
     }
 
+    @Test
+    public void testToStringStartsAndEndsWithNewLine() {
+        Job firstJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertEquals('\n', firstJob.toString().charAt(0));
+        assertEquals('\n', firstJob.toString().charAt(firstJob.toString().length()-1));
+    }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData() {
+        Job firstJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        assertEquals("\nID: "+ firstJob.getId() +
+                "\nName: "+ firstJob.getName() +
+                "\nEmployer: "+ firstJob.getEmployer().toString() +
+                "\nLocation: "+ firstJob.getLocation().toString() +
+                "\nPosition Type: "+ firstJob.getPositionType().toString() +
+                "\nCore Competency: "+ firstJob.getCoreCompetency().toString() + "\n", firstJob.toString());
+    }
+
+    @Test
+    public void testToStringHandlesEmptyField() {
+        Job firstJob = new Job("Product Tester", new Employer("ACME"), new Location("Desert"), new PositionType(""), new CoreCompetency(""));
+        assertEquals("\nID: " + firstJob.getId() +
+                "\nName: Product Tester" +
+                "\nEmployer: ACME" +
+                "\nLocation: Desert" +
+                "\nPosition Type: Data not available" +
+                "\nCore Competency: Data not available\n", firstJob.toString());
+    }
+
 }

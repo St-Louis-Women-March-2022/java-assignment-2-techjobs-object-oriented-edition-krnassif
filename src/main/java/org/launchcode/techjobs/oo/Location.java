@@ -8,9 +8,6 @@ public class Location {
     private static int nextId = 1;
     private String value;
 
-    //public Location() {
-    //   id = nextId;
-    //   nextId++;
 
     public Location(String value) {
         super();
