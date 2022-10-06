@@ -122,7 +122,7 @@ public class Job {
             coreCompetency.setValue("Data not available");
         }
 
-        return "\nIT: " + this.getId() +
+        return "\nID: " + this.getId() +
                 "\nName: " + this.getName() +
                 "\nEmployer: " + this.getEmployer() +
                 "\nLocation: " + this.getLocation() +
